@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Flowers - Flower Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff9f9;
+    }
+    .flower-img {
+    height: 300px;
+    object-fit: auto;
+  }
+    .navbar {
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .page-title {
+      text-align: center;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🌸 Flower Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="flowers.html">Flowers</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart 🛒</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container page-title">
+    <h2>Explore Our Flowers Collection</h2>
+    <p class="text-muted">Choose from a variety of vibrant and fresh flowers for all occasions.</p>
+  </div>
+
+  <div class="container my-4">
+    <div id="flowerContainer" class="row row-cols-1 row-cols-md-3 g-4" id="flowerContainer">
+
+    </div>
+
+  </div>
+
+   <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 Flower Sales Portal. All rights reserved. Designed by Kumar Shanu.
+  </footer>
+
+  <script>
+    const flowers = [
+      { id: 1, name: "Rose Red", price: 50, image: "images/Rose_Red.jpg" },
+      { id: 2, name: "Jasmine", price: 30, image: "images/Jasmine.jpg" },
+      { id: 3, name: "Marigold", price: 20, image: "images/Marigold.jpg" },
+      { id: 4, name: "Sunflower", price: 40, image: "images/Sunflower.jpg" },
+      { id: 5, name: "Tulip", price: 60, image: "images/Tulip.jpg" },
+      { id: 6, name: "Lotus", price: 45, image: "images/Lotus.jpg" },
+      { id: 7, name: "Orchid", price: 90, image: "images/Orchid.jpg" },
+      { id: 8, name: "Lily", price: 70, image: "images/Lily.jpg" },
+      { id: 9, name: "Daisy", price: 35, image: "images/Daisy.jpg" },
+      { id: 10, name: "Peony", price: 85, image: "images/Peony.jpg" },
+      { id: 11, name: "Hydrangea", price: 75, image: "images/Hydrangea.jpg" },
+      { id: 12, name: "Carnation", price: 40, image: "images/Carnation.jpg" },
+      { id: 13, name: "Chrysanthemum", price: 50, image: "images/Chrysanthemum.jpg" },
+      { id: 14, name: "Gerbera", price: 38, image: "images/Gerbera.jpg" },
+      { id: 15, name: "Zinnia", price: 28, image: "images/Zinnia.jpg" },
+      { id: 16, name: "Petunia", price: 32, image: "images/Petunia.jpg" },
+      { id: 17, name: "Anthurium", price: 95, image: "images/Anthurium.jpg" },
+      { id: 18, name: "Aster", price: 42, image: "images/Aster.jpg" },
+      { id: 19, name: "Calendula", price: 22, image: "images/Calendula.jpg" },
+      { id: 20, name: "Ranunculus", price: 48, image: "images/Ranunculus.jpg" }
+    ];
+
+    const container = document.getElementById("flowerContainer");
+
+flowers.forEach(flower => {
+  const col = document.createElement("div");
+  col.className = "col";
+
+  col.innerHTML = `
+    <div class="card h-100 shadow-sm">
+      <img src="${flower.image}" class="card-img-top flower-img" alt="${flower.name}">
+      <div class="card-body">
+        <h5 class="card-title">${flower.name}</h5>
+        <p class="card-text">${flower.description}</p>
+        <p><strong>Price: ₹${flower.price}</strong></p>
+        <button class="btn btn-success w-100">Add to Cart</button>
+      </div>
+    </div>
+  `;
+
+  container.appendChild(col);
+});
+
+    function addToCart(id) {
+      const flower = flowers.find(f => f.id === id);
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      const index = cart.findIndex(item => item.id === id);
+      if (index !== -1) {
+        cart[index].quantity += 1;
+      } else {
+        cart.push({ ...flower, quantity: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${flower.name} added to cart!`);
+    }
+  </script>
+  <script src="js/flowers.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

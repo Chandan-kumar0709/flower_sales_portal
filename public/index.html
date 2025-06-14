@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flower Sales Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      animation: fadeInDown 2s ease;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      animation: fadeInUp 2s ease;
+    }
+    .carousel-caption {
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .section-heading {
+      margin-top: 50px;
+    }
+    .flower-box img {
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    @keyframes fadeInDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">🌸 Flower Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="flowers.html">Flowers</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Cart 🛒</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero text-center">
+    <h1>Welcome to the Flower Sales Portal</h1>
+    <p>Discover, Choose, and Send Beautiful Blooms</p>
+    <a href="flowers.html" class="btn btn-light mt-3">Shop Flowers</a>
+  </div>
+
+  <!-- Flower Slogans Carousel -->
+  <div id="sloganCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="carousel-caption">
+          <h5>“Flowers are the music of the ground.”</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-caption">
+          <h5>“Say it with flowers — every time.”</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="carousel-caption">
+          <h5>“Fresh flowers for fresh emotions.”</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popular Indian Flowers -->
+  <div class="container section-heading">
+    <h2 class="text-center mb-4">Famous Flowers of India</h2>
+    <div class="row">
+      <div class="col-md-4 flower-box mb-4">
+        <img src="./images/Lotus.jpg" class="w-100" alt="Lotus">
+        <h5 class="mt-2 text-center">Lotus - Symbol of Purity</h5>
+      </div>
+      <div class="col-md-4 flower-box mb-4">
+        <img src="./images/Hibiscus.jpg" class="w-100" alt="Hibiscus">
+        <h5 class="mt-2 text-center">Hibiscus - Offering to Gods</h5>
+      </div>
+      <div class="col-md-4 flower-box mb-4">
+        <img src="./images/Jasmine.jpg" class="w-100" alt="Jasmine">
+        <h5 class="mt-2 text-center">Jasmine - Symbol of Elegance</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flower Categories -->
+  <div class="container section-heading">
+    <h2 class="text-center mb-4">Shop by Categories</h2>
+    <div class="row">
+      <div class="col-md-4 text-center mb-4">
+        <img src="./images/Bouquets.jpg" class="img-fluid rounded mb-2" alt="Bouquets">
+        <h5>Bouquets</h5>
+        <p>Perfect for birthdays, weddings and anniversaries.</p>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <img src="./images/Fragrant Flowers.jpg" class="img-fluid rounded mb-2" alt="Fragrant Flowers">
+        <h5>Fragrant Flowers</h5>
+        <p>Add aroma to your home and uplift your mood.</p>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <img src="./images/Religious.jpg" class="img-fluid rounded mb-2" alt="Religious Flowers">
+        <h5>Religious Use</h5>
+        <p>Used in temples and offerings during festivals.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 Flower Sales Portal. All rights reserved. Designed by Kumar Shanu.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
