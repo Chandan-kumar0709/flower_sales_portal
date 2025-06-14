@@ -1,0 +1,22 @@
+[
+  { "id": 1, "name": "Rose", "price": 50, "image": "Rose_Red.jpg", "description": "Symbol of love and passion." },
+  { "id": 2, "name": "Tulip", "price": 40, "image": "Tulip.jpg", "description": "Represents perfect love and elegance." },
+  { "id": 3, "name": "Lily", "price": 60, "image": "Lily.jpg", "description": "Known for purity and renewal." },
+  { "id": 4, "name": "Sunflower", "price": 35, "image": "Sunflower.jpg", "description": "Symbolizes warmth and happiness." },
+  { "id": 5, "name": "Daisy", "price": 30, "image": "Daisy.jpg", "description": "Represents innocence and cheer." },
+  { "id": 6, "name": "Orchid", "price": 80, "image": "Orchid.jpg", "description": "Exotic beauty and strength." },
+  { "id": 7, "name": "Marigold", "price": 25, "image": "Marigold.jpg", "description": "Used in festivals; signifies joy." },
+  { "id": 8, "name": "Jasmine", "price": 45, "image": "Jasmine.jpg", "description": "Fragrant flower symbolizing purity." },
+  { "id": 9, "name": "Carnation", "price": 38, "image": "Jarnation.jpg", "description": "Symbolizes fascination and love." },
+  { "id": 10, "name": "Peony", "price": 70, "image": "Peony.jpg", "description": "Represents honor and romance." },
+  { "id": 11, "name": "Lavender", "price": 55, "image": "Lavender.jpg", "description": "Calming and relaxing properties." },
+  { "id": 12, "name": "Hydrangea", "price": 65, "image": "hydrangea.jpg", "description": "Symbol of heartfelt emotion." },
+  { "id": 13, "name": "Chrysanthemum", "price": 42, "image": "Chrysanthemum.jpg", "description": "Represents longevity and joy." },
+  { "id": 14, "name": "Begonia", "price": 36, "image": "Begonia.jpg", "description": "Symbol of caution and harmony." },
+  { "id": 15, "name": "Geranium", "price": 33, "image": "Geranium.jpg", "description": "Used for healing and health." },
+  { "id": 16, "name": "Anemone", "price": 47, "image": "Anemone.jpg", "description": "Anticipation and protection." },
+  { "id": 17, "name": "Gardenia", "price": 68, "image": "Gardenia.jpg", "description": "Sign of purity and sweetness." },
+  { "id": 18, "name": "Zinnia", "price": 29, "image": "Zinnia.jpg", "description": "Lasting affection and thoughts." },
+  { "id": 19, "name": "Aster", "price": 31, "image": "Aster.jpg", "description": "Love and wisdom." },
+  { "id": 20, "name": "Gladiolus", "price": 48, "image": "Gladiolus.jpg", "description": "Strength of character and honor." }
+]
